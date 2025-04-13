@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.3 on win32)" generated="2025-04-13T15:03:34.779327" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="C:\Projeto-Robot\src\Tests">
+<suite id="s1-s1" name="Login TST" source="C:\Projeto-Robot\src\Tests\Login_TST">
+<suite id="s1-s1-s1" name="PreencherFormulario" source="C:\Projeto-Robot\src\Tests\Login_TST\PreencherFormulario.robot">
+<test id="s1-s1-s1-t1" name="TC01 - Preencher formulario de cadastro com Sucesso" line="5">
+<kw name="Dado que eu acesse o site da Kabum" owner="Login_Steps">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-04-13T15:03:35.657043" level="INFO">Opening browser 'chrome' to base url 'https://www.kabum.com.br/'.</msg>
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-04-13T15:03:35.656426" elapsed="7.789469"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-04-13T15:03:43.449946" elapsed="0.226137"/>
+</kw>
+<status status="PASS" start="2025-04-13T15:03:35.655397" elapsed="8.021130"/>
+</kw>
+<kw name="E clico em cadastre-se" owner="Login_Steps">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Home.A_Cadastro}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-13T15:03:43.678209" elapsed="0.145860"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-13T15:03:43.825298" level="INFO">Clicking element '//a[@id='linkCadastroHeader']'.</msg>
+<arg>${Home.A_Cadastro}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-13T15:03:43.824463" elapsed="4.823418"/>
+</kw>
+<status status="PASS" start="2025-04-13T15:03:43.677320" elapsed="4.970761"/>
+</kw>
+<kw name="E preencha o formulario de criar conta com dados validos" owner="Login_Steps">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Login.Input_FullName}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-13T15:03:48.649139" elapsed="0.124727"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-13T15:03:48.774998" level="INFO">Typing text 'Caio Mário Aragão' into text field '//input[@name='nome']'.</msg>
+<arg>${Login.Input_FullName}</arg>
+<arg>${FullName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-13T15:03:48.774152" elapsed="0.427160"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-13T15:03:49.204097" level="INFO">Clicking element '//input[@data-testid='cpf-input']'.</msg>
+<arg>${Login.Input_CPF}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-13T15:03:49.201896" elapsed="2.118756"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-13T15:03:51.322764" level="INFO">Typing text '263.869.730-38' into text field '//input[@data-testid='cpf-input']'.</msg>
+<arg>${Login.Input_CPF}</arg>
+<arg>${CPF}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-13T15:03:51.321364" elapsed="0.284683"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-13T15:03:51.607176" level="INFO">Clicking element '//input[@data-testid='mobile-number-input']'.</msg>
+<arg>${Login.Input_Telefone}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-13T15:03:51.606362" elapsed="0.104936"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-13T15:03:51.712183" level="INFO">Typing text '31955-4330180' into text field '//input[@data-testid='mobile-number-input']'.</msg>
+<arg>${Login.Input_Telefone}</arg>
+<arg>${Telefone}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-13T15:03:51.711550" elapsed="0.179959"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-13T15:03:51.892416" level="INFO">Clicking element '//input[@data-testid='email-input']'.</msg>
+<arg>${Login.Input_Email}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-13T15:03:51.891745" elapsed="0.122104"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-13T15:03:52.014545" level="INFO">Typing text 'caio.mario.aragao@marktechbr.com.br' into text field '//input[@data-testid='email-input']'.</msg>
+<arg>${Login.Input_Email}</arg>
+<arg>${Email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-13T15:03:52.014027" elapsed="0.281904"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-13T15:03:52.296894" level="INFO">Clicking element '//input[@data-testid='birth-date-input']'.</msg>
+<arg>${Login.Input_DataNascimento}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-13T15:03:52.296166" elapsed="0.121314"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-13T15:03:52.418429" level="INFO">Typing text '15121981' into text field '//input[@data-testid='birth-date-input']'.</msg>
+<arg>${Login.Input_DataNascimento}</arg>
+<arg>${DataNascimento}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-13T15:03:52.417699" elapsed="0.118231"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Login.Button_Genero}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-13T15:03:52.536374" elapsed="0.030793"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-13T15:03:52.568075" level="INFO">Clicking element '//div[@class='sc-deXhhX gFHIwc']'.</msg>
+<arg>${Login.Button_Genero}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-13T15:03:52.567474" elapsed="0.098435"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Login.Button_TipoGenero}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-13T15:03:52.666104" elapsed="0.023292"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-13T15:03:52.690557" level="INFO">Clicking element '//span[@class='sc-epALIP eIELNo']'.</msg>
+<arg>${Login.Button_TipoGenero}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-13T15:03:52.689862" elapsed="0.091787"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-13T15:03:52.782299" level="INFO">Clicking element '//input[@data-testid='password-input']'.</msg>
+<arg>${Login.Input_CriarSenha}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-13T15:03:52.781823" elapsed="0.087606"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-13T15:03:52.870118" level="INFO">Typing text '1520@89Ads' into text field '//input[@data-testid='password-input']'.</msg>
+<arg>${Login.Input_CriarSenha}</arg>
+<arg>${Senha}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-13T15:03:52.869607" elapsed="0.143161"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-13T15:03:53.013446" level="INFO">Clicking element '//input[@data-testid='confirm-password-input']'.</msg>
+<arg>${Login.Input_ConfirmarSenha}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-13T15:03:53.012955" elapsed="0.100059"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-13T15:03:53.113940" level="INFO">Typing text '1520@89Ads' into text field '//input[@data-testid='confirm-password-input']'.</msg>
+<arg>${Login.Input_ConfirmarSenha}</arg>
+<arg>${Senha}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-13T15:03:53.113411" elapsed="0.142242"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Login.Button_ConheceuKabum}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-13T15:03:53.255900" elapsed="0.026090"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-13T15:03:53.282787" level="INFO">Clicking element '//div[@class='sc-deXhhX cHuLTR']'.</msg>
+<arg>${Login.Button_ConheceuKabum}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-13T15:03:53.282191" elapsed="0.116018"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Login.Button_TipoConheceuKabum}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-13T15:03:53.398427" elapsed="0.028708"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-13T15:03:53.427984" level="INFO">Clicking element '//span[@class='sc-epALIP eIELNo' and text()='BuscaPe']'.</msg>
+<arg>${Login.Button_TipoConheceuKabum}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-13T15:03:53.427389" elapsed="0.097414"/>
+</kw>
+<status status="PASS" start="2025-04-13T15:03:48.648703" elapsed="4.876282"/>
+</kw>
+<kw name="E clico em Continuar" owner="Login_Steps">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-04-13T15:03:53.526379" level="INFO">Executing JavaScript:
+window.scrollBy(0, 250);
+Without any arguments.</msg>
+<arg>window.scrollBy(0, 250);</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-04-13T15:03:53.525872" elapsed="0.007871"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-13T15:03:55.534808" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-13T15:03:53.533921" elapsed="2.001216"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Login.Button_Continuar}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-13T15:03:55.535706" elapsed="0.052803"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-13T15:03:55.590386" level="INFO">Clicking element '//button[@data-testid='button-form-continue' and text()='Continuar']'.</msg>
+<arg>${Login.Button_Continuar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-13T15:03:55.588906" elapsed="0.281247"/>
+</kw>
+<status status="PASS" start="2025-04-13T15:03:53.525465" elapsed="2.344911"/>
+</kw>
+<kw name="Então sou redirecionado para pagina de adcionar endereço" owner="Login_Steps">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ADD_Endereco.Title_Element}</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-13T15:03:55.872183" elapsed="1.311057"/>
+</kw>
+<status status="PASS" start="2025-04-13T15:03:55.871577" elapsed="1.311809"/>
+</kw>
+<kw name="E fecho o navegador" owner="Login_Steps">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-04-13T15:03:57.184100" elapsed="3.557909"/>
+</kw>
+<status status="PASS" start="2025-04-13T15:03:57.183766" elapsed="3.558612"/>
+</kw>
+<tag>login</tag>
+<status status="PASS" start="2025-04-13T15:03:35.654481" elapsed="25.088874"/>
+</test>
+<status status="PASS" start="2025-04-13T15:03:34.821459" elapsed="25.925164"/>
+</suite>
+<status status="PASS" start="2025-04-13T15:03:34.819673" elapsed="25.931719"/>
+</suite>
+<suite id="s1-s2" name="Produtos TST" source="C:\Projeto-Robot\src\Tests\Produtos_TST">
+<suite id="s1-s2-s1" name="PesquisarProduto" source="C:\Projeto-Robot\src\Tests\Produtos_TST\PesquisarProduto.robot">
+<test id="s1-s2-s1-t1" name="TC02 - Pesquisar Produto e Adicionar ao Carrinho" line="5">
+<kw name="Dado que eu acesse o site da Kabum" owner="Login_Steps">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-04-13T15:04:00.785196" level="INFO">Opening browser 'chrome' to base url 'https://www.kabum.com.br/'.</msg>
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-04-13T15:04:00.782973" elapsed="6.820097"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-04-13T15:04:07.603377" elapsed="0.202378"/>
+</kw>
+<status status="PASS" start="2025-04-13T15:04:00.782544" elapsed="7.023569"/>
+</kw>
+<kw name="E Pesquiso pelo Fone de Ouvido Qcy H3 Anc" owner="Produtos_Steps">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Produtos.Visible_Barra_Pesquisa}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-13T15:04:07.807898" elapsed="0.083579"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-13T15:04:07.892821" level="INFO">Typing text 'Fone de Ouvido Qcy H3 Anc' into text field '//input[@id='input-busca' and @type='text' and @name='query' and @class='id_search_input']'.</msg>
+<arg>${Produtos.Visible_Barra_Pesquisa}</arg>
+<arg>${Nome_Produto}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-13T15:04:07.891816" elapsed="0.307569"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-13T15:04:08.200220" level="INFO">Clicking element '//button[@type='submit' and @aria-label='Buscar']'.</msg>
+<arg>${Produtos.Click_Pesquisar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-13T15:04:08.199598" elapsed="2.776047"/>
+</kw>
+<status status="PASS" start="2025-04-13T15:04:07.807307" elapsed="3.168599"/>
+</kw>
+<kw name="E adciono o produto ao carrinho" owner="Produtos_Steps">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Produtos.Visible_Produto}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-13T15:04:10.977077" elapsed="0.297168"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-13T15:04:11.275341" level="INFO">Clicking element '//img[@title='Fone de Ouvido Qcy H3 Anc, Cancelamento De Ruído, Adaptativo, Bluetooth 5.3, Multiponto, Bateria 60h']'.</msg>
+<arg>${Produtos.Visible_Produto}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-13T15:04:11.274517" elapsed="2.333295"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Produtos.Click_Comprar}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-13T15:04:13.608090" elapsed="0.044695"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-13T15:04:13.653494" level="INFO">Clicking element '//div[@class='sc-a24aba34-2 iviqDc']/button[@class='sc-8b813326-0 bLjOez' and contains(., 'COMPRAR')]'.</msg>
+<arg>${Produtos.Click_Comprar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-13T15:04:13.652967" elapsed="0.780273"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Produtos.Click_IrParaCarrinho}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-13T15:04:14.433446" elapsed="2.609958"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-13T15:04:17.044240" level="INFO">Clicking element '//button[contains(@class, 'group') and contains(., 'IR PARA O CARRINHO')]'.</msg>
+<arg>${Produtos.Click_IrParaCarrinho}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-13T15:04:17.043723" elapsed="2.783304"/>
+</kw>
+<status status="PASS" start="2025-04-13T15:04:10.976608" elapsed="8.850819"/>
+</kw>
+<kw name="Quando insiro mais de 10 unidades" owner="Produtos_Steps">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Produtos.Click_AdcionarQuantidadeProduto}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-13T15:04:19.829335" elapsed="0.130867"/>
+</kw>
+<kw name="Double Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-13T15:04:19.961334" level="INFO">Double clicking element '//input[contains(@class, 'Quantity-styles__QuantityInput')]'.</msg>
+<arg>${Produtos.Click_AdcionarQuantidadeProduto}</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-13T15:04:19.960501" elapsed="0.449766"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-13T15:04:20.411125" level="INFO">Typing text '60' into text field '//input[contains(@class, 'Quantity-styles__QuantityInput')]'.</msg>
+<arg>${Produtos.Click_AdcionarQuantidadeProduto}</arg>
+<arg>60</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-13T15:04:20.410467" elapsed="0.134198"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-13T15:04:20.545324" level="INFO">Clicking element '//button[contains(@class, 'applyCouponButton') and .//span[text()='Aplicar cupom']]'.</msg>
+<arg>${Produtos.Click_AplicarCupom}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-13T15:04:20.544845" elapsed="0.114637"/>
+</kw>
+<status status="PASS" start="2025-04-13T15:04:19.828387" elapsed="0.831265"/>
+</kw>
+<kw name="Então é essibido uma mensagem de erro" owner="Produtos_Steps">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Produtos.Equal_MENSAGEM_ERRO}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-13T15:04:20.660419" elapsed="0.022064"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-04-13T15:04:20.730699" level="INFO">${texto_mensagem} = O limite máximo de quantidade para esse produto é 10</msg>
+<var>${texto_mensagem}</var>
+<arg>${Produtos.Equal_MENSAGEM_ERRO}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-13T15:04:20.682675" elapsed="0.048102"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${texto_mensagem}</arg>
+<arg>O limite máximo de quantidade para esse produto é 10</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-04-13T15:04:20.730992" elapsed="0.000280"/>
+</kw>
+<status status="PASS" start="2025-04-13T15:04:20.660089" elapsed="0.071279"/>
+</kw>
+<kw name="E o valor é corrigido para 10" owner="Produtos_Steps">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Produtos.Click_AdcionarQuantidadeProduto}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-13T15:04:20.732376" elapsed="0.018609"/>
+</kw>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2025-04-13T15:04:20.767152" level="INFO">${valor_atual} = 10</msg>
+<var>${valor_atual}</var>
+<arg>${Produtos.Click_AdcionarQuantidadeProduto}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-13T15:04:20.751241" elapsed="0.015957"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${valor_atual}</arg>
+<arg>10</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-04-13T15:04:20.767379" elapsed="0.000389"/>
+</kw>
+<status status="PASS" start="2025-04-13T15:04:20.731890" elapsed="0.036011"/>
+</kw>
+<kw name="E fecho o navegador" owner="Login_Steps">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-04-13T15:04:20.768634" elapsed="2.399101"/>
+</kw>
+<status status="PASS" start="2025-04-13T15:04:20.768317" elapsed="2.399827"/>
+</kw>
+<tag>PesquisaProduto</tag>
+<status status="PASS" start="2025-04-13T15:04:00.781717" elapsed="22.387389"/>
+</test>
+<status status="PASS" start="2025-04-13T15:04:00.762306" elapsed="22.409464"/>
+</suite>
+<status status="PASS" start="2025-04-13T15:04:00.754713" elapsed="22.420787"/>
+</suite>
+<status status="PASS" start="2025-04-13T15:03:34.781262" elapsed="48.397457"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">login</stat>
+<stat pass="1" fail="0" skip="0">PesquisaProduto</stat>
+</tag>
+<suite>
+<stat name="Tests" id="s1" pass="2" fail="0" skip="0">Tests</stat>
+<stat name="Login TST" id="s1-s1" pass="1" fail="0" skip="0">Tests.Login TST</stat>
+<stat name="PreencherFormulario" id="s1-s1-s1" pass="1" fail="0" skip="0">Tests.Login TST.PreencherFormulario</stat>
+<stat name="Produtos TST" id="s1-s2" pass="1" fail="0" skip="0">Tests.Produtos TST</stat>
+<stat name="PesquisarProduto" id="s1-s2-s1" pass="1" fail="0" skip="0">Tests.Produtos TST.PesquisarProduto</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

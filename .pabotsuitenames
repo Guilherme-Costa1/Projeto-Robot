@@ -1,0 +1,6 @@
+datasources:047ac445a4b8ddbf951d9c5dc01ac895cd6aa311
+commandlineoptions:97d170e1550eee4afc0af065b78cda302a97674c
+suitesfrom:no-suites-from-option
+file:1450209e406bcc677e5bce2c504be0d302635486
+--suite Tests.Login TST.PreencherFormulario
+--suite Tests.Produtos TST.PesquisarProduto

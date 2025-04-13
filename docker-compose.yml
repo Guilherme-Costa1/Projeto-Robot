@@ -1,0 +1,44 @@
+
+services:
+  teste:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./src:/app/src  # Montar o diretório src no contêiner
+    environment:
+      - DISPLAY=:99  # Se necessário para o Selenium
+    networks:
+      - grafana
+    depends_on:
+      - mysql  # Dependência do MySQL
+
+  mysql:
+    image: mysql:latest  # Usar imagem oficial do MySQL
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password  # Senha do root
+      MYSQL_DATABASE: Robot  # Nome do banco de dados inicial
+      MYSQL_USER: user  # Nome do usuário
+      MYSQL_PASSWORD: user_password  # Senha do usuário
+    ports:
+      - "3307:3306"  # Mapeando porta 3307 do host para porta 3306 do contêiner
+    networks:
+      - grafana
+
+  grafana:
+    image: grafana/grafana:latest  # Usar imagem oficial do Grafana
+    networks:
+      - grafana
+    ports:
+      - "3000:3000"  # Mapeando porta 3000 do host para porta 3000 do contêiner
+    volumes:
+      - ./grafana:/etc/grafana/provisioning/  # Montar diretório para configuração do Grafana
+    depends_on:
+      - mysql  # Dependência do MySQL
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin  # Usuário admin do Grafana
+      - GF_SECURITY_ADMIN_PASSWORD=admin  # Senha do admin do Grafana
+
+networks:
+  grafana:
