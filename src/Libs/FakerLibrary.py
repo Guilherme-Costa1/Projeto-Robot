@@ -27,7 +27,7 @@ class FakerLibrary:
 
     @keyword
     def generate_phone_number(self):
-        return fake.phone_number()
+        return fake.msisdn()[2:]
 
     @keyword
     def generate_city(self):
